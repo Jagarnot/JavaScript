@@ -21,11 +21,14 @@
     </style>
 </head>
 <body>
-    <div id= "Area" onclick="clique()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id= "Area">
         Interaja...
     </div>
     <script>
         var a = window.document.getElementById('Area')
+        a.addEventListener('click', clique)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
         function clique(){
             a.innerHTML='Clicou!!'
             a.style.backgroundColor='white'

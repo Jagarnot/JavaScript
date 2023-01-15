@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Js</title>
+    <style>
+        body{
+            background-color: azure;
+        }
+        h1{
+            font-size: 24px;
+            background-color: aqua;
+            box-shadow:  4px 4px 4px rgb(0, 0, 0);
+            text-shadow: 1px 1px 2px black;
+            padding: 1px 1px 12px 12px;
+            margin: -8px -9px 14px -8px;
+        }
+        input{
+            margin: 5px 2px 5px 6px;
+        }
+        div{
+            margin: 11px 0px 0px -8px;
+            padding: 7px 0px 7px 17px;
+            background-color: rgb(116, 223, 223);
+            width: 380px;
+            box-shadow:  4px 4px 4px rgb(0, 0, 0);
+            text-shadow: 1px 1px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.querySelector('div#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = (`A soma dos valores de ${n1} + ${n2} vai ser igual a <strong>${s}</strong>`)
+
+        }
+    </script>
+
+</body>
+</html>
