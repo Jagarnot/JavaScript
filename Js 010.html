@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        h1{
+            font-size: 2em;
+            text-align: center;
+            margin: 25px 12px 12px 12px;
+        }
+        input{
+            margin:70px 12px 12px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Reconhecimento de Velocidades!!</h1>
+
+    Velocidade do carro<input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="km">Aqui vai aparecer o Resultado</div>
+    <script>
+        function verificar() {
+            var vel = window.document.getElementById('txtvel')
+            var km = window.document.querySelector('div#km')
+            var velo = Number(vel.value)
+            km.innerHTML = (`Sua velocidade foi de <strong>${velo} Km/h</strong>`)
+            if (velo > 60) {
+                km.innerHTML += `<p>Você estava  a ${velo} Km/h, Você ultrapassou o limite de velocidade e foi <strong>Multado</strong></p>`
+            }
+            km.innerHTML += `<p>Dirija sempre com o cinto de segurança</p>`
+        }
+    </script>
+    
+</body>
+</html>

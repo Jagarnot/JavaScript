@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        h1{
+            font-size: 2em;
+            text-align: center;
+            margin: 25px 12px 12px 12px;
+        }
+        input{
+            margin:70px 12px 12px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Reconhecimento de Nacionalidade</h1>
+    O seu pais de necionalidade <input type="text" name="textp" id="textp">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="country">Aqui vai exibir o seu pais de nacionalidade</div>
+    <script>
+        function verificar() {
+            var pa = window.document.getElementById('textp')
+            var country = window.document.querySelector('div#country')
+            var pais = pa.value
+            country.innerHTML = `<p>O seu pais de origem é o <strong>${pais}</strong><p/>`
+                if (pais == 'Brasil') {
+                    country.innerHTML +=`<p>Você é <strong>Brasileiro<strong/><p/>`
+        } else {
+            country.innerHTML += `<p>Você é <strong>estrangeiro</strong><p/>`
+        }}
+    </script>
+
+
+    
+</body>
+</html>
