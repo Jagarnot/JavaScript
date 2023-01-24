@@ -37,6 +37,11 @@
             text-shadow: 2px 2px 2px black;
 
         }
+        input{
+            padding: 4px 1px 1px 1px;
+            margin: 4px 3px 4px 4px;
+        }
+        
     </style>
 </head>
 <body>
@@ -47,15 +52,39 @@
     </header>
     <section>
        <div>
-        Testando....
+        <P>Ano de nascimento:
+            <input type="number" name="txtano" id="txtano"> 
+        </P>
+            
+            <p style=" padding: 25px 0px 16px 0px;"> Sexo:
+            <input type="radio" name="txtsex" id="Mas" checked >
+            <Label for="Mas">Masculino</Label>
+            <input type="radio" name="txtsex" id="Fem">
+            <label for="Fem">Feminino</label>
+        </p>
+            
+            <p style="margin: -2px 0px 12px -2px;"><input type="button" value="verificar" onclick="verificar()">
+            </p>   
        </div>
-       <div>
-        Olá
+       <div id="Resultado">
+        Prencha os dados acima para ver o Resultado
        </div>
     </section>
     <footer>
         Criado por Jagarnot
     </footer>
-    <script src="script.js"></script>
+    <script>
+        function verificar() {
+            var data = new Date()
+            var ano = data.getFullYear()
+            var fano = window.document.getElementById('txtano')
+            var res = window.document.querySelector('div#Resultado')
+            if (fano.value == 0 || Number(fano.value) > ano){
+                window.alert('[ERRO] Verifique o conteudo digitado')
+            } else {
+                window.alert('Tudo ok')
+            }
+        }
+    </script>
 </body>
 </html>
