@@ -53,21 +53,20 @@
     <section>
        <div>
         <P>Ano de nascimento:
-            <input type="number" name="txtano" id="txtano"> 
+            <input type="number" name="txtano" id="txtano1" min="1900" max="2023"><!--Comando para instalar um tempo mini determinado e um maximo determinado, dentro da códifição que vai solicitar o ano de nascimento do usuario -->
+            <p>Sexo:
+                <input type="radio" name="sex1" id="masc" checked><!--Comando para inserir a função de interação selecionando-->
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sex1" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick = "verificar()"><!--Comando para interagir com o JavaScript, neste em especifico ele só despara quando precionar o verificar-->
+            </p>
         </P>
-            
-            <p style=" padding: 25px 0px 16px 0px;"> Sexo:
-            <input type="radio" name="txtsex" id="Mas" checked >
-            <Label for="Mas">Masculino</Label>
-            <input type="radio" name="txtsex" id="Fem">
-            <label for="Fem">Feminino</label>
-        </p>
-            
-            <p style="margin: -2px 0px 12px -2px;"><input type="button" value="verificar" onclick="verificar()">
-            </p>   
        </div>
-       <div id="Resultado">
-        Prencha os dados acima para ver o Resultado
+       <div id="res">
+            Aqui vai sair o Resultado
        </div>
     </section>
     <footer>
@@ -77,13 +76,17 @@
         function verificar() {
             var data = new Date()
             var ano = data.getFullYear()
-            var fano = window.document.getElementById('txtano')
-            var res = window.document.querySelector('div#Resultado')
-            if (fano.value == 0 || Number(fano.value) > ano){
-                window.alert('[ERRO] Verifique o conteudo digitado')
-            } else {
-                window.alert('Tudo ok')
+            var fano = window.document.getElementById('txtano1')
+            var res = window.document.querySelector('div#res')
+            if (fano.value == 0 || Number(fano.value > ano)) {
+                window.alert('[ERRO]')
+            } else{
+                var fmsex = window.document.getElementsByName('sex1')
+                var idade = ano - Number(fano.value)
+                res.innerHTML = `Sua idade é ${idade}`
             }
+            
+        
         }
     </script>
 </body>
