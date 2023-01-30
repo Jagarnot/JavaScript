@@ -7,7 +7,8 @@
     <title>Document</title>
     <style>
         body{
-            background-color: rgb(71, 139, 241);
+            background-color: rgb(233, 230, 150);
+            font-size: 28px;
         }
         *{
             margin: auto;
@@ -38,31 +39,56 @@
         }
         footer{
             text-align: center;
-            color: rgb(255, 255, 255);
+            color: #ffffff;
             padding: 20px 12px 12px 12px;
             font-style: italic;
-            text-shadow: 2px 2px 2px black;
+            text-shadow: 2px 2px 2px #7ef7f7;
         }
+        img{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+        }
+
         
     </style>
 </head>
-<body>
+<body onload="carregar()">
     <header>
-        <h1>Titulo</h1>
+        <h1>Hora do dia</h1>
     </header>
     <section>
         <div id="msg">
             <p>Aqui vai aparecer a hora</p>
         </div>
-        <div id="img">
-            <img src="Manhã_edited.jpg" alt="Manhã">
+        <div  id="foto">
+            <img  id="img" src="fotomanha1.png" alt="foto de dia">
         </div>
     </section>
     <footer>
-        criado por Jagarnot
+        Criado por Jagarnot
     </footer>
     <script>
+        function carregar(){
+            var msg2 = window.document.querySelector('div#msg')
+            var data = new Date()
+            var hora = data.getHours()
+            var minutos = data.getMinutes()
+            var segundos = data.getSeconds()
+            msg2.innerHTML= `Agora são ${hora}:${minutos}:${segundos} Hrs`
+            if (hora >= 0 && hora < 12){
+                img.src='fotomanha1.png'
 
+            } else if (hora >= 12 && hora < 18) {
+                img.src='fototarde1.png'
+                document.body.style.background = '#7ef7f7'
+            
+            } else {
+                img.src='fotonoite1.png'
+                document.body.style.background = '#000000'
+            }
+        }
+    
     </script>
     
 </body>
