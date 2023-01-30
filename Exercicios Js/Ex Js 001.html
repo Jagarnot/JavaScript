@@ -88,7 +88,7 @@
                 img.setAttribute('id', 'foto')
                 if (fmsex[0].checked) {
                     genero = 'Homem'
-                    if (idade >= 0 && idade < 7) {
+                    if (idade > 0 && idade <= 7) {
                     //Bebe
                     img.setAttribute('src' , 'foto-bebe-m.png')
                     } else if (idade < 27 && idade >= 15) {
@@ -106,7 +106,7 @@
                     }
                 } else if (fmsex[1].checked){
                     genero = 'Mulher'
-                    if (idade >= 0 && idade < 7) {
+                    if (idade >= 0 && idade <= 7) {
                     //Criança
                     img.setAttribute('src' , 'foto-bebe-f.png')
                     } else if (idade >= 15 && idade < 27) {
