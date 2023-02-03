@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+    <style>
+        body{
+            background-color: rgb(82, 163, 238);
+        }
+        h1{
+            color: white;
+            text-align: center;
+            padding: 100px 12px 12px 12px;
+            font-size: 2em;
+        }
+        section{
+            background-color: white;
+            width: 500px;
+            padding: 12px 12px 12px 12px;
+            margin: 12px 12px 12px  150px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px black;
+        }
+        footer{
+            text-align: center;
+            color: white;
+            font-size: 17px;
+            
+        }
+        div{
+            padding: 20px 2px 2px 40px;
+            margin: 12px 12px 12px 12px ;    
+        }
+        div > p{
+            padding: 12px 12px 12px 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Inicio:
+                        <input type="number" name="t1" id="t2">
+            </p>
+            <p>
+                Final :
+                        <input type="number" name="a1" id="a2">
+            </p>
+            <p>
+                Passo:
+                        <input type="number" name="f1" id="f2">
+            </p>
+        <p><input type="button" value="calcular" onclick="calcular()">
+        </p>
+        </div>
+        <div id="res">
+            Aqui vai aparecer o Resultado
+        </div>
+    </section>
+    <footer>
+        <p><em>Curso em video</em></p>
+    </footer>
+    <script>
+        function calcular() {
+            var n1 = window.document.getElementById('t2')
+            var n2 = window.document.getElementById('a2')
+            var n3 = window.document.getElementById('f2')
+            var res = window.document.getElementById('res')
+            while (n1 <= n2) {
+                n1 = n1 + n3
+            }
+            
+            
+
+        }
+    </script>
+    
+</body>
+</html>

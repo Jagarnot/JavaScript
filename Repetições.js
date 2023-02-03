@@ -1,19 +1,19 @@
-var c =1 
+var c = 1
 do {
-    console.log(`Passo ${c}` )
+    console.log(`Passo ${c}`)
     c++
-} while(c <= 8)
-
+} while (c <= 10)
 
 
 
 /*var c = 1
 while (c <= 8) {
     console.log(`Passo ${c}`)
-    c++ // Este comando significa que o "c" recebe ele mesmo mais 1 está em começando em Js.}*/ 
+    c++
+}*/
 
-/*
-console.log('Tudo bem')
+
+/*console.log('Tudo bem')
 console.log('Tudo bem')
 console.log('Tudo bem')
 console.log('Tudo bem')
