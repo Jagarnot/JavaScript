@@ -72,9 +72,8 @@
             var n2 = window.document.getElementById('a2')
             var n3 = window.document.getElementById('f2')
             var res = window.document.getElementById('res')
-            while (n1 <= n2) {
-                n1 = n1 + n3
-            }
+            if (n1.value.length == 0 || n2.value.length == 0 || n3.value.length == 0 )
+            window.alert('[ERRO], verifique os campos de digitação por favor!!')
             
             
 

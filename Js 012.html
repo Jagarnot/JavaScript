@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <style>
+        body{
+            background-color: rgb(90, 164, 233);
+        }
+        h1{
+            color: white;
+            text-align: center;
+            padding: 100px 12px 12px 12px;
+            font-size: 2em;
+        }
+        section{
+            background-color: white;
+            width: 500px;
+            padding: 12px 12px 12px 12px;
+            margin: 12px 12px 12px  150px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 2px black;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculando</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Inicio: <input type="number" name="inicio" id="t1"></p>
+            <p>Fim: <input type="number" name="fim" id="t2"></p>
+            <p>Passo: <input type="number" name="passo" id="t3"></p>
+            <p><input type="button" value="calcular" onclick="calcular()"></p>
+        </div>
+        <div id="res">
+            
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        function calcular() {
+            let n1 = window.document.getElementById('t1')
+            let n2 = window.document.getElementById('t2')
+            let n3 = window.document.getElementById('t3')
+            let res = window.document.querySelector('div#res')
+            if (n1.value.length == 0 || n2.value.length == 0 || n3.value.length == 0){
+            window.alert('[ERRO], verifique os campos digitados')
+            } else {
+                let i = Number(n1.value)
+                let f = Number(n2.value)
+                let p = Number(n3.value)
+
+                for (let c = i;c <= f;c += p) {
+                    res.innerHTML += `${c} `
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
