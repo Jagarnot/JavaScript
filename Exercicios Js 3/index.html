@@ -74,24 +74,25 @@
            
             if (n1.value.length == 0 || n2.value.length == 0 || n3.value.length == 0)
             window.alert('[ERRO], verifique os campos digitados')
-                //Crescente
             else{
                 res.innerHTML = 'Contando: '
                 let i = Number(n1.value)
                 let f = Number(n2.value)
                 let p = Number(n3.value)
-            if (p == 0)
+            if (p <= 0) {
             window.alert('Valor de "Passo" invalido, o mesmo será validado como o valor de 1')
-            p == 1
+            p = 1 }
+                //Crescente
             if (i < f) {
                 for (let c = i;c <= f; c += p) {
-                res.innerHTML += `${c} \u{1F525}` // Este código só funciona entre crases
+                res.innerHTML += `${c} \u{1F525}` // Este código só funciona entre crases;
             }   //Regressiva
             }  else{
                 for (let c = i;c >= f ;c -= p) {
                     res.innerHTML += `${c} \u{1F525}`
                 }
             }
+            res.innerHTML += `\u{1F3C1}`
             }
             
             
